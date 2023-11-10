@@ -1,0 +1,26 @@
+.boton-contenedor {
+    height: 83px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 38px;
+    background-color: #1b1b32;
+    color: white;
+    border-radius: 25px;
+    margin: 4px;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    flex: 1 1;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+ 
+}
+
+
+
+.operador { 
+    background-color:  #1b1b32;
+    color: rgb(164,167,173);;
+}
+

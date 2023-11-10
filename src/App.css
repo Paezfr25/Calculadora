@@ -1,50 +1,47 @@
-
 body {
-   
-        --s: 200px; /* control the size */
-        --c1: #1d1d1d;
-        --c2: #4e4f51;
-        --c3: #3c3c3c;
-        
-        background:
-          repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
-           calc(.5*var(--s)) calc(.5*var(--s)*0.577),
-          repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
-        background-size: var(--s) calc(var(--s)*0.577);
-    
-      
+  --s: 200px; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+  
+  background:
+    repeating-conic-gradient(from 30deg, #0000 0 120deg, var(--c3) 0 180deg) 
+    calc(.5 * var(--s)) calc(.5 * var(--s) * 0.577),
+    repeating-conic-gradient(from 30deg, var(--c1) 0 60deg, var(--c2) 0 120deg, var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s) * 0.577);
 }
 
 .App {
-    
-    height: 100%;
-   width: 100%;
-   
-    font-family: lato,sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-
+  min-height: 100vh; /* Garantiza que el contenido se ajuste a la pantalla completa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px; /* Añadido un poco de espacio alrededor del contenido */
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
 }
-
-
 
 .contenedor-calculadora {
-    width: 400px;
-    margin: 55px;
-    padding: 25px;
-    background-color:rgba(76,79,130,1);
-    border-radius: 20px;
-    border: none;
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  background-color: rgba(76, 79, 130, 1);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.fila {
+  margin: 15px 0; /* Aumentado el espacio entre las filas */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye los elementos uniformemente en la fila */
 }
 
-.fila {
- margin: 4px;
- display: flex;
- align-items: center;
- justify-content: center;
+/* Estilos específicos para pantallas más pequeñas (479x750) */
+@media (max-width: 479px) {
+  .fila {
+    flex-direction: row; /* Forzar dirección de fila en pantallas pequeñas */
+    justify-content: space-around; /* Distribuir los elementos alrededor en pantallas pequeñas */
+  }
 }

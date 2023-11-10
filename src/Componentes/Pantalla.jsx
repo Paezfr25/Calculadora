@@ -1,6 +1,6 @@
 import React from "react";
 import '../Hojas-de-estilo/Pantalla.css';
-import { useState, useEffect } from "react";
+
  
 
 const Pantalla = ({ input, mostrarAlerta, ocultarAlerta }) => (
